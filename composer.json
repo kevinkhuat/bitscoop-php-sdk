@@ -1,0 +1,34 @@
+{
+    "name": "bitscoop/bitscoop-php-sdk",
+    "description": "A simple SDK to work with the BitScoop API platform.",
+    "keywords": ["bitscoop"],
+    "type": "library",
+    "homepage": "https://github.com/mrhegemon/bitscoop-php-sdk",
+    "license": "MIT",
+    "authors": [
+      {
+          "name": "Kevin Khuat",
+          "email": "kevinkhuat@yahoo.com"
+      }
+    ],
+    "support": {
+        "issues": "https://github.com/mrhegemon/bitscoop-php-sdk/issues"
+    },
+    "require": {
+        "php": ">=5.5",
+        "guzzlehttp/guzzle": "^6.2"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^6.2"
+    },
+    "autoload": {
+        "psr-4": {
+          "BitScoop\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "BitScoop\\Test\\": "tests/"
+        }
+    }
+}
