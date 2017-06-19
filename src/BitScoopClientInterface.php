@@ -1,7 +1,7 @@
 <?php
 namespace BitScoop;
 
-interface BitScoopSDKInterface extends BitScoopBaseInterface {
+interface BitScoopClientInterface extends BitScoopBaseInterface {
 
   /**
    * Creates and returns an instance of BitScoopAPI for a specific API map.

@@ -1,4 +1,14 @@
 <?php
+/**
+ * BitScoopBaseInterface
+ *
+ * @category Class
+ * @package  BitScoop
+ * @author   BitScoop
+ * @license  https://github.com/bitscooplabs/bitscoop-nodejs-sdk/blob/master/LICENSE BitScoop Labs
+ * @link     https://github.com/bitscooplabs/bitscoop-nodejs-sdk/blob/master
+ *
+ */
 
 namespace BitScoop;
 
