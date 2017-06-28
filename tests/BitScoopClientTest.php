@@ -31,7 +31,10 @@ class BitScoopClientTest extends TestCase
 
     public function testCreateConnection() {
         $client = $this->testGetBitScoopClient();
-        $client->createConnection(BITSCOOP_PROVIDER_ID,"","");
+//        $client->createConnection(BITSCOOP_PROVIDER_ID,[],"");
+
+//        $client->getConnection('500eaf2301a4497f84ed2aff64fd9123', "");
+//        $client->deleteConnection('68aa27b1c0834dac8b9a4d57b7836096', "");
 
         $this->assertTrue(true);
     }

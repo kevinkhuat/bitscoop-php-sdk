@@ -7,7 +7,7 @@ use \GuzzleHttp\RequestOptions;
 
 class BitScoopBase implements BitScoopBaseInterface
 {
-  
+    protected $sdkMapRef = [];
   public function callApi($options, $cb)
   {
 
@@ -17,15 +17,18 @@ class BitScoopBase implements BitScoopBaseInterface
       'hostname' => $options['hostname']
     ];
 
-    if (isset($options['path'])) {
+    if (isset($options['path']))
+    {
       $urlParts['pathname'] = $options['path'];
     }
 
-    if (isset($options['port'])) {
+    if (isset($options['port']))
+    {
       $urlParts['port'] = $options['port'];
     }
 
-    if (isset($options['query'])) {
+    if (isset($options['query']))
+    {
       $urlParts['query'] = $options['query'];
     }
 
@@ -36,16 +39,21 @@ class BitScoopBase implements BitScoopBaseInterface
     ];
 
 
-    if ($options['body']) {
+    if (isset($options['body']))
+    {
       $requestOptions['body'] = json_encode($options['body']);
 
-      if (isset($requestOptions['headers']['Content-Type'])) {
+      if (isset($requestOptions['headers']['Content-Type']))
+      {
         $requestOptions['headers']['Content-Type'] = 'application/json';
       }
     }
 
     $client = new GuzzleHttp\Client();
     $response = $client->request($method, $uri, $requestOptions);
+    print_r($response->getStatusCode());
+    print_r($response);
+    print "<br/> LASTSTETSTST ";
     $body =  GuzzleHttp\json_decode($response->getBody());
     $cb(null, $response, $body);
   }

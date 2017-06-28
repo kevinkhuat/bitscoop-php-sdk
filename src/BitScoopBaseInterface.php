@@ -24,8 +24,8 @@ interface BitScoopBaseInterface {
   /**
    * Calls the BitScoop API.
    *
-   * @param object options Options to use in making the call.
-   * @param function cb The callback function to call when finished.
+   * @param object $options Options to use in making the call.
+   * @param callable $cb The callback function to call when finished.
    * @returns {Promise}
    */
   public function callApi($options, $cb);
